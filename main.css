@@ -39,9 +39,8 @@ text-align: justify;
 font: normal 14px georgia,serif;
 }
 
-p {
-font: normal 14px
-}
+/* p {font: normal 14px
+} */
 
 /*
  * Global resets
