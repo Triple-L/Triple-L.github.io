@@ -256,3 +256,27 @@ a.sidebar-nav-item:focus {
         margin-right: 4rem;
     }
 }
+
+
+
+
+
+
+<style type="text/css">
+	.text{
+		font-size:16px;
+		text-align:justify;
+    font-family: Arial, serif;
+
+	}
+	.text:first-letter{
+		font-size:20px;
+		color:#111;
+    font-weight: bold;
+		/* float:left; */
+	}
+	p{
+		text-indent:2em;
+		margin:0;
+    text-align:justify;
+	}
