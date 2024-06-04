@@ -1,37 +1,74 @@
----
-layout: default
-title: Home
----
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" class="gr__yf_io">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Lili Liu's Homepage</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" type="text/css" href="main.css?2" />
+    </head>
+    <body data-gr-c-s-loaded="true">
+        <div class="sidebar">
+            <div align="center">
+                <div style="width: 200px;">
+                    <img src="lili.JPG" style="width: 100%;" />
+                    <div style="text-align: center">
+                        <h1><span class="me">Lili Liu</span></h1>
+                    </div>
+                </div>
+                <a href="./blog.html" align="center"><img width="40px" src="icon/blog.png"/></a>
+                <a href="https://triple-l.github.io/" align="center"><img width="40px" src="icon/github.png"/></a>
+                <a href="https://www.linkedin.com/in/helloworldjemmaliu/" align="center"><img width="50px" src="icon/linkedin.png"/></a>
+                <a href="art.html" align="center"><img width="50px" src="icon/art.png"/></a>
+               <br /><br />
+            </div>
+        </div>
+        <div class="content">
+        <h3>About Me</h3>
+        <br>I am presently employed as a Machine Learning Engineer at Huawei Vancouver Research Center. I earned my Master's degree from Concordia University, located in Montreal,
+        QC, Canada, under the guidance of Dr. Suen. My research pursuits are centered around Model Compression, encompassing essential techniques such as Pruning, Quantization, 
+        and Knowledge Distillation. These techniques are applied to a diverse range of models, including computer vision models, autonomous driving models (utilizing LiDAR and camera inputs), 
+        as well as Large Language Models (LLMs).
+        <br>Please refer to my <a href="./Lili_Liu_MLE.pdf">CV</a> for more details.</font></br>
+        
+        
+        <h3>Contact</h3>
+        <p><a href="lili.jemma.liu@gmail.com">lili.jemma.liu@gmail.com</a> </p>
+        
+        
+        <div id="publications">
+            <h3>Projects</h3>
+            <table class="table pub">
+                <tbody>
+                    <tr>
+                        <td width="200"><img src="thumbnails/corr.png" width="150"/></td>
+                        <td>
+                            <div class="author">Shitao Tang,<span class="me">Chengzhou Tang</span>, Rui Huang, Siyu Zhu, and Ping Tan</div>
+                            <div class="title">DSM: Dense Scene Matching for Camera Localization</div>
+                            <div class="journal"><span class="journal-title">IEEE Conference on Computer Vision and Pattern Recognition (CVPR)</span>, <span class="journal-year">2021</span></div>
+                            <div class="link"><a href="https://arxiv.org/pdf/2103.16792.pdf">Paper</a> <a href="https://github.com/Tangshitao/Dense-Scene-Matching">Code</a>
+                        </td>
+                    </tr>
 
-<div class="posts">
-  {% for post in paginator.posts %}
-  <div class="post">
-    <h1 class="post-title">
-      <a href="{{ post.url }}">
-        {{ post.title }}
-      </a>
-    </h1>
+                    <tr><td></td><td></td>
+                    </tr>
 
-    <span class="post-date">{{ post.date | date_to_string }}</span>
 
-    {{ post.content }}
-  </div>
-  {% endfor %}
-</div>
 
-<div class="pagination">
-  {% if paginator.next_page %}
-    <a class="pagination-item older" href="{{ site.baseurl }}page{{paginator.next_page}}">Older</a>
-  {% else %}
-    <span class="pagination-item older">Older</span>
-  {% endif %}
-  {% if paginator.previous_page %}
-    {% if paginator.page == 2 %}
-      <a class="pagination-item newer" href="{{ site.baseurl }}">Newer</a>
-    {% else %}
-      <a class="pagination-item newer" href="{{ site.baseurl }}page{{paginator.previous_page}}">Newer</a>
-    {% endif %}
-  {% else %}
-    <span class="pagination-item newer">Newer</span>
-  {% endif %}
-</div>
+
+
+
+
+
+                    
+                </tbody>
+            </table>
+            </div>
+
+
+          <div>
+            Triple-L: Live, Laugh, Love. Have a nice day! ✿
+            </div>
+
+        </div>
+    </body>
+</html>
