@@ -1,116 +1,101 @@
-<!-- <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<center>
-<head>
-	<title> Lili's Art Gallery</title>
-	<link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
-	<link rel="stylesheet" type="text/css" media="screen" href="css/iconize.css" />	
-</head>
 
-
-<body>
-
-<div id="paper-title"> <h1> Exhibition of My Watercolor Artistry </h1> </div>
-
-<div id="venue">
-	 2024-2025@Vancouver
-</div>
-
-
-</body>
-</center>
-</html> -->
-
-
-
-
-
-
-
-
-<!DOCTYPE HTML>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>X's Art Gallery</title>
-  <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
-  <link rel="stylesheet" type="text/css" media="screen" href="css/iconize.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Watercolor Exhibition</title>
+
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background-color: #f0f0f0;
-      font-family: sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+    :root {
+      --page-max: 1100px;   /* 页面最大宽度 */
+      --gap: 20px;          /* 图片间距 */
+      --img-radius: 10px;   /* 圆角 */
     }
 
-    #paper-title {
-      margin-top: 30px;
+    body {
+      margin: 0;
+      padding: 40px 16px;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       text-align: center;
+      display: flex;
+      justify-content: center; /* 整体居中 */
+    }
+
+    .page {
+      width: 100%;
+      max-width: var(--page-max);
+    }
+
+    #paper-title h1 {
+      margin: 0 0 10px;
+      font-size: 32px;
+      font-weight: 650;
+      letter-spacing: 0.2px;
     }
 
     #venue {
-      margin-bottom: 30px;
-      text-align: center;
+      margin-bottom: 28px;
+      opacity: 0.8;
+      font-size: 16px;
     }
 
-    .table-wrapper {
-      width: 100%;
-      max-width: 800px;
+    /* 画廊：默认每行 2 张，自动换行 */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: var(--gap);
       margin: 0 auto;
-      display: flex;
-      justify-content: center;
     }
 
-    table {
+    .gallery img {
       width: 100%;
-      border-collapse: collapse;
-      background-color: rgba(255, 255, 255, 0.2);
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-      table-layout: auto;
-    }
-
-    td {
-      border: 1px solid rgba(255, 255, 255, 0.5);
-      padding: 10px;
-      text-align: center;
-      vertical-align: middle;
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
+      height: auto;          /* 等比缩放 */
       display: block;
-      margin: 0 auto;
+      border-radius: var(--img-radius);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
     }
+
+    /* 手机：屏幕太窄就变 1 列（更好看） */
+    @media (max-width: 640px) {
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+      #paper-title h1 {
+        font-size: 26px;
+      }
+    }
+
+    /* 可选：如果你想所有图片显示成统一比例（会裁切）
+       取消注释即可
+    */
+    /*
+    .gallery img {
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+    }
+    */
   </style>
 </head>
 
 <body>
+  <div class="page">
+    <div id="paper-title">
+      <h1>Exhibition of My Watercolor Artistry</h1>
+    </div>
 
-  <div id="paper-title">
-    <h1>Exhibition of My Watercolor Artistry</h1>
+    <div id="venue">
+      2024–2025 @ Vancouver
+    </div>
+
+    <div class="gallery">
+      <img src="lili.JPG" alt="Art Image 1">
+      <img src="lili.JPG" alt="Art Image 2">
+      <img src="lili.JPG" alt="Art Image 3">
+      <img src="lili.JPG" alt="Art Image 4">
+      <img src="lili.JPG" alt="Art Image 5">
+      <img src="lili.JPG" alt="Art Image 6">
+    </div>
   </div>
-
-  <div id="venue">
-    2024–2025 @ Vancouver
-  </div>
-
-  <div class="table-wrapper">
-    <table>
-      <tr>
-        <td><img src="lili.JPG" alt="Art Image 1"></td>
-        <td><img src="lili.JPG" alt="Art Image 2"></td>
-      </tr>
-      <tr>
-        <td><img src="lili.JPG" alt="Art Image 3"></td>
-        <td><img src="lili.JPG" alt="Art Image 4"></td>
-      </tr>
-    </table>
-  </div>
-
 </body>
 </html>
-
