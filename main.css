@@ -151,8 +151,11 @@ a.sidebar-nav-item:focus {
 }
 
 .me {
-    color: #C33833; 
-    font-weight: bold;
+    /* color:#BFA35A; 
+    font-weight: bold; */
+    color: #000000;
+    font-weight: 800;
+    #font-style: italic;
 }
 
 .pub a {
